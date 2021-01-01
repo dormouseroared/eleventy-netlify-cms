@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>
+      Eleventy with Netlify CMS for a blog
+    </title>
+  </head>
+  <body>
+    <h1>
+      Eleventy with Netlify CMS for a blog
+    </h1>
+    <h2>Configure Eleventy to copy folders to output</h2>
+
+<img src="/images/uploads/PassthroughFileCopy.png" alt="featured image">
+
+<p><h2>Manual Passthrough File Copy (Faster) New in v0.2.14</h2>
+<p><a href="https://www.11ty.dev/docs/copy/">Eleventy documentation</a></p>
+<p>Searching the entire directory structure for files to copy based on file extensions is not optimal with large directory structures.</p>
+<p>If we know what non-template static content we want to appear in our output, we can opt-in to specify files or directories for Eleventy to copy. This will probably speed up your build times.</p>
+<p>Passthrough File Copy entries are relative to the root of your project and not your Eleventy input directory.</p>
+<p><code>Filename .eleventy.js</code></p>
+<pre><code class="language-js">module.exports = function(eleventyConfig) {
+  // Output directory: _site
+
+  // Copy `img/` to `_site/img`
+  eleventyConfig.addPassthroughCopy(&quot;img&quot;);
+  
+  // Copy `css/fonts/` to `_site/css/fonts`
+  // If you use a subdirectory, it’ll copy using the same directory structure.
+  eleventyConfig.addPassthroughCopy(&quot;css/fonts&quot;);
+};
+</code></pre>
+</p>
+  </body>
+</html>
