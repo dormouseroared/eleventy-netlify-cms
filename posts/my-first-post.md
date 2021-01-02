@@ -18,4 +18,4 @@ put a random image in the root images/uploads for the featured image but it didn
 
 ## and here it is again using markdown
 
-![here is the image again](/images/uploads/image01.png)
+![here is the image again](/images/uploads/image02.png)
